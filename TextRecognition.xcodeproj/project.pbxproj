@@ -14,6 +14,7 @@
 		DA79ACDF295A13FD0020CFEA /* TextRecognitionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA79ACDE295A13FD0020CFEA /* TextRecognitionTests.swift */; };
 		DA79ACE9295A13FD0020CFEA /* TextRecognitionUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA79ACE8295A13FD0020CFEA /* TextRecognitionUITests.swift */; };
 		DA79ACEB295A13FD0020CFEA /* TextRecognitionUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA79ACEA295A13FD0020CFEA /* TextRecognitionUITestsLaunchTests.swift */; };
+		DA79ACF8295A1B850020CFEA /* MNISTClassifier.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = DA79ACF7295A1B850020CFEA /* MNISTClassifier.mlmodel */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +45,8 @@
 		DA79ACE4295A13FD0020CFEA /* TextRecognitionUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TextRecognitionUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA79ACE8295A13FD0020CFEA /* TextRecognitionUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextRecognitionUITests.swift; sourceTree = "<group>"; };
 		DA79ACEA295A13FD0020CFEA /* TextRecognitionUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextRecognitionUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		DA79ACF7295A1B850020CFEA /* MNISTClassifier.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = MNISTClassifier.mlmodel; sourceTree = "<group>"; };
+		DA79ACF9295A1D010020CFEA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +77,7 @@
 		DA79ACC1295A13FC0020CFEA = {
 			isa = PBXGroup;
 			children = (
+				DA79ACF7295A1B850020CFEA /* MNISTClassifier.mlmodel */,
 				DA79ACCC295A13FC0020CFEA /* TextRecognition */,
 				DA79ACDD295A13FD0020CFEA /* TextRecognitionTests */,
 				DA79ACE7295A13FD0020CFEA /* TextRecognitionUITests */,
@@ -94,6 +98,7 @@
 		DA79ACCC295A13FC0020CFEA /* TextRecognition */ = {
 			isa = PBXGroup;
 			children = (
+				DA79ACF9295A1D010020CFEA /* Info.plist */,
 				DA79ACCD295A13FC0020CFEA /* TextRecognitionApp.swift */,
 				DA79ACCF295A13FC0020CFEA /* ContentView.swift */,
 				DA79ACD1295A13FD0020CFEA /* Assets.xcassets */,
@@ -259,6 +264,7 @@
 			files = (
 				DA79ACD0295A13FC0020CFEA /* ContentView.swift in Sources */,
 				DA79ACCE295A13FC0020CFEA /* TextRecognitionApp.swift in Sources */,
+				DA79ACF8295A1B850020CFEA /* MNISTClassifier.mlmodel in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -420,7 +426,7 @@
 				DEVELOPMENT_TEAM = R6H5BYZ5TH;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_FILE = TextRecognition/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -449,7 +455,7 @@
 				DEVELOPMENT_TEAM = R6H5BYZ5TH;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_FILE = TextRecognition/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
