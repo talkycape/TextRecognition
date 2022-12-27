@@ -29,6 +29,12 @@ struct ContentView: View {
     @State private var penDown = false
     @State private var requests = [VNRequest]()
     @State private var isOn = true
+
+    // image capture variables
+    @State private var capturedImage = UIImage()
+    @State private var showSheet = false
+    @State private var isImageCaptured = false
+
     
     // var canvasView: some View {
     var canvasView: some View {
@@ -86,6 +92,8 @@ struct ContentView: View {
                 line.coordinates.removeAll()
                 newDigit = ""
                 isOn.toggle()
+                showSheet = false
+                isImageCaptured = false
             }
       }
     
@@ -103,13 +111,26 @@ struct ContentView: View {
           .border(Color.green)
     }
 
+    fileprivate func showCapture() -> some View {
+        return Image(uiImage: capturedImage)
+          .resizable()
+          .frame(width: 256, height: 256, alignment: .center)
+          .border(Color.green)
+    }
+
     // Thanks to Brian Advent for these tutorials:
     // https://www.youtube.com/watch?v=NNKPbdT9gXU&list=PLY1P2_piiWEY761sVFoZAdbqp_B524Y17
     
     // fileprivate func processText() -> some View {
     fileprivate func processText() -> some View {
         return Text("recognize")
-            .font(.system(size: 16))
+            .font(.headline)
+            .frame(maxWidth: 256)
+            .frame(height: 50)
+            .background(LinearGradient(gradient: Gradient(colors: [Color(#colorLiteral(red: 0.262745098, green: 0.0862745098, blue: 0.8588235294, alpha: 1)), Color(#colorLiteral(red: 0.5647058824, green: 0.462745098, blue: 0.9058823529, alpha: 1))]), startPoint: .top, endPoint: .bottom))
+            .cornerRadius(16)
+            .foregroundColor(.white)
+            .padding(.horizontal, 20)
             .onTapGesture {
                 let newImage = canvasView.snapshot()
                 var uiImage:UIImage!
@@ -134,16 +155,44 @@ struct ContentView: View {
             }
     }
 
+    fileprivate func captureImage() -> some View {
+        return Text("Capture Image")
+            .font(.headline)
+            .frame(maxWidth: 256)
+            .frame(height: 50)
+            .background(LinearGradient(gradient: Gradient(colors: [Color(#colorLiteral(red: 0.262745098, green: 0.0862745098, blue: 0.8588235294, alpha: 1)), Color(#colorLiteral(red: 0.5647058824, green: 0.462745098, blue: 0.9058823529, alpha: 1))]), startPoint: .top, endPoint: .bottom))
+            .cornerRadius(16)
+            .foregroundColor(.white)
+            .padding(.horizontal, 20)
+            .onTapGesture {
+                showSheet = true
+                isImageCaptured = true
+            }
+    }
+                
+                
     var body: some View {
         VStack {
             clearCanvas()
-            if isOn {
-                showCanvas()
+            if isImageCaptured {
+                showCapture()
             } else {
-                showImage()
+                if isOn {
+                    showCanvas()
+                } else {
+                    showImage()
+                }
             }
+            captureImage()
             processText()
             showText()
+            .sheet(isPresented: $showSheet) {
+                //  If you wish to pick an image from the photo library:
+                ImagePicker(sourceType: .photoLibrary, selectedImage: $capturedImage)
+
+                //  If you wish to take a photo from camera instead:
+                //ImagePicker(sourceType: .camera, selectedImage: self.$image)
+            }
         }
     }
   
