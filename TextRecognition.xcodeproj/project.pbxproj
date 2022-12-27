@@ -15,6 +15,7 @@
 		DA79ACE9295A13FD0020CFEA /* TextRecognitionUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA79ACE8295A13FD0020CFEA /* TextRecognitionUITests.swift */; };
 		DA79ACEB295A13FD0020CFEA /* TextRecognitionUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA79ACEA295A13FD0020CFEA /* TextRecognitionUITestsLaunchTests.swift */; };
 		DA79ACF8295A1B850020CFEA /* MNISTClassifier.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = DA79ACF7295A1B850020CFEA /* MNISTClassifier.mlmodel */; };
+		DAC98215295BA6BC00A2D9E8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC98214295BA6BC00A2D9E8 /* ViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		DA79ACEA295A13FD0020CFEA /* TextRecognitionUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextRecognitionUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		DA79ACF7295A1B850020CFEA /* MNISTClassifier.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = MNISTClassifier.mlmodel; sourceTree = "<group>"; };
 		DA79ACF9295A1D010020CFEA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		DAC98214295BA6BC00A2D9E8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +103,7 @@
 				DA79ACF9295A1D010020CFEA /* Info.plist */,
 				DA79ACCD295A13FC0020CFEA /* TextRecognitionApp.swift */,
 				DA79ACCF295A13FC0020CFEA /* ContentView.swift */,
+				DAC98214295BA6BC00A2D9E8 /* ViewController.swift */,
 				DA79ACD1295A13FD0020CFEA /* Assets.xcassets */,
 				DA79ACD3295A13FD0020CFEA /* Preview Content */,
 			);
@@ -264,6 +267,7 @@
 			files = (
 				DA79ACD0295A13FC0020CFEA /* ContentView.swift in Sources */,
 				DA79ACCE295A13FC0020CFEA /* TextRecognitionApp.swift in Sources */,
+				DAC98215295BA6BC00A2D9E8 /* ViewController.swift in Sources */,
 				DA79ACF8295A1B850020CFEA /* MNISTClassifier.mlmodel in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
