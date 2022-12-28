@@ -188,10 +188,10 @@ struct ContentView: View {
             showText()
             .sheet(isPresented: $showSheet) {
                 //  If you wish to pick an image from the photo library:
-                ImagePicker(sourceType: .photoLibrary, selectedImage: $capturedImage)
+                //ImagePicker(sourceType: .photoLibrary, selectedImage: $capturedImage)
 
                 //  If you wish to take a photo from camera instead:
-                //ImagePicker(sourceType: .camera, selectedImage: self.$image)
+                ImagePicker(sourceType: .camera, selectedImage: self.$capturedImage)
             }
         }
     }
